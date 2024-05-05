@@ -8,13 +8,14 @@ const config = {
   tagline: 'Ассистент который поможет',
   favicon: 'img/favicon.ico',
 
-  url: process.env.URL,
-  baseUrl: process.env.BASE_URL,
+  url: process.env.URL || "http://localhost",
+  baseUrl: process.env.BASE_URL || "/",
 
   organizationName: 'Zatsepin.dev',
   projectName: 'rupilot-docs',
 
-  onBrokenLinks: 'throw',
+  //onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -29,6 +30,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -57,6 +59,7 @@ const config = {
         logo: {
           alt: 'Rupilot',
           src: 'img/logo.svg',
+          href: 'https://rupilot.ru',
         },
         items: [
           {

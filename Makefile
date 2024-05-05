@@ -1,5 +1,7 @@
+SHELL := /bin/bash
+DECONARGS = $(shell echo "$$(for i in `cat .env`; do out+="--build-arg $$i " ; done; echo $$out;out="")")
 REVISION = $(shell git rev-parse --short HEAD)
-.PHONY: build, push, deploy
+.PHONY: build push deploy
 
 build:
 	docker build -f ./Dockerfile --build-arg REVISION=$(REVISION) --build-arg NODE_ENV=production -t rupilot-ru-docs .
