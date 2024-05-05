@@ -8,8 +8,8 @@ const config = {
   tagline: 'Ассистент который поможет',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.rupilot.ru',
-  baseUrl: '/',
+  url: process.env.URL,
+  baseUrl: process.env.BASE_URL,
 
   organizationName: 'Zatsepin.dev',
   projectName: 'rupilot-docs',
