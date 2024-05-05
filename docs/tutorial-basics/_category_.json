@@ -1,0 +1,8 @@
+{
+  "label": "Установка и настройка",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Rupilot поддерживает VSCode, nvim, CLI."
+  }
+}
